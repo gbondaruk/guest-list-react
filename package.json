@@ -2,28 +2,51 @@
   "name": "guest-list-react",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "next build",
-    "dev": "next dev",
-    "lint": "next lint",
-    "start": "next start"
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "unrs-resolver"
+    ],
+    "ignoredBuiltDependencies": [
+      "core-js",
+      "core-js-pure"
+    ]
   },
   "dependencies": {
-    "next": "15.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "1.84.0"
+    "@upleveled/react-scripts": "5.1.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "sass": "1.90.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@types/node": "^24.0.4",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "eslint": "^9.29.0",
-    "eslint-config-upleveled": "^9.2.3",
-    "prettier": "^3.6.2",
-    "stylelint": "^16.21.0",
-    "stylelint-config-upleveled": "^1.1.9",
-    "typescript": "^5.8.3"
-  }
+    "@jest/globals": "^30.0.5",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.6.4",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/testing-library__jest-dom": "^6.0.0",
+    "eslint": "^9.33.0",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "jest-watch-typeahead": "^3.0.1"
+  },
+  "packageManager": "pnpm@10.14.0"
 }
